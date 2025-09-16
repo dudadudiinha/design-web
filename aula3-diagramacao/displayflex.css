@@ -1,0 +1,20 @@
+header, footer{
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color:  cadetblue;
+    text-align: center;
+}
+main{
+    display: flex;
+    gap: 1.5rem; /* tipo margin. espaçamento entre eles. existe o end, start, space-between, space-arund, space-evenly */
+    justify-content: center; /* centralizar */
+    flex-wrap: wrap; /* permite que os cards fiquem em várias linhas */
+}
+main > section{
+    /* o sinal de > formatará o filho direto da marcação */
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20rem;
+    box-shadow: 0 0 0.5rem 0.5rem rgb(236, 236, 236);
+}

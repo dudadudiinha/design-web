@@ -1,0 +1,16 @@
+figure{
+    float: right; /*permite que os elementos ficam abaixo ou arrodiando*/
+}
+body{
+    background-color: rgb(253, 250, 244);
+}
+section.card-flutuante{
+    float: left;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+footer{
+    clear : both; /*limpa a página dos elementos flutuantes, fica grudado em baixo*/
+    background-color: aquamarine;
+}
