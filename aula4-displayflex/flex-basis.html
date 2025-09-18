@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-basis</title>
+    <style>
+        section{
+            border: 1px solid black;
+            padding: 1rem;
+            margin: 2rem;
+            display: flex;
+            gap: 1rem; /* espeçamento entre filhos */
+            flex-wrap: wrap; /* colocar o wrap junto do flex-basis para deixar o título em cima, quebrar a linha*/
+        }
+        section > h2{
+            flex-basis: 100%; /* tipo definir a largura do elemento. por estar usando o display flex, é mais recomendável que width */
+            background-color: rgba(126, 176, 219, 0.377);
+        }
+        section > div{ /* ">" representa o filho */
+            background-color: aliceblue;
+            padding: 1rem;
+            flex-basis: 20rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>NOTÍCIAS</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugiat? Maxime ipsum quod, repellendus veritatis consequuntur dolorem? Dolore voluptatibus molestias sit, ratione est odit excepturi pariatur quia iusto libero laborum?</p>
+        </div>
+        <div>
+            <p>Vitae, quod. Corporis odio quos et possimus tempora aliquam architecto velit perspiciatis impedit delectus! Exercitationem voluptatum, quod illo pariatur similique beatae, quae expedita inventore animi doloribus sequi, illum ipsam nisi.</p>
+        </div>
+        <div>
+            <p>Molestias eveniet ab quia? Nesciunt voluptates reiciendis qui, neque eos doloribus illo nulla beatae quibusdam iusto, autem ducimus quia numquam ab. Necessitatibus facilis dolore et nesciunt unde deserunt voluptatum officia!</p>
+        </div>
+        <h2>NOTÍCIAS</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugiat? Maxime ipsum quod, repellendus veritatis consequuntur dolorem? Dolore voluptatibus molestias sit, ratione est odit excepturi pariatur quia iusto libero laborum?</p>
+        </div>
+        <div>
+            <p>Vitae, quod. Corporis odio quos et possimus tempora aliquam architecto velit perspiciatis impedit delectus! Exercitationem voluptatum, quod illo pariatur similique beatae, quae expedita inventore animi doloribus sequi, illum ipsam nisi.</p>
+        </div>
+    </section>
+</body>
+</html>
