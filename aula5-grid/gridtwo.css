@@ -1,0 +1,32 @@
+main{
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 20rem 20rem;
+    grid-template-areas: 
+    "f a b c"
+    "f d d c"
+    "f e e c";
+}
+
+section{
+    border: 1px solid black;
+    padding: 1rem;
+}
+section.a{
+    grid-area: a;
+}
+section.b{
+    grid-area: b;
+}
+section.c{
+    grid-area: c;
+}
+section.d{
+    grid-area: d;
+}
+section.e{
+    grid-area: e;
+}
+section.f{
+    grid-area: f;
+}

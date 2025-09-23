@@ -1,0 +1,34 @@
+main{ /* o grid deve ser definido (o display) no container, assim como no flex */
+    display: grid;
+    gap: 1rem;
+    /* a quantidade de valores equivale a quantidade de colunas no "grid-template-areas"*/
+    grid-template-columns: 1fr 3fr 1fr; /* fr é a unidade de fração*/
+    grid-template-rows: 20rem 20rem; /* pode usar várias unidades de medida */ 
+    /* cuidado quando definir a altura das linhas. o conteúdo pode ser maior que a área disponível */
+    grid-template-areas: 
+    "a a d"
+    "b c d";
+    /*
+    1 - colocar todos os filhos, todas as tagas dentro da mãe, do grid
+    2 - não pode fazer mesclagem diagonal
+    3 - para esoaço vazio, usar ponto
+    */
+    /* grid-template-areas = desenha a matriz */
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    overflow: auto; /* exibe a barra de rolagem caso a área seja pequena pra quantidade de texto */
+}
+section.noticias{
+    grid-area: a; /* a definição de variável para cada área do grid é obrigatória */
+}
+section.comemoracao{
+    grid-area: b;
+}
+section.organizadores{
+    grid-area: c;
+}
+section.corrida{
+    grid-area: d;
+}
