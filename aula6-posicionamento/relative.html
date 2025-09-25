@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div#relative{
+        background-color: blue;
+        margin: 20rem;
+        padding: 1rem;
+        position: relative; /* quando coloca o relative, a outra fica relativa a ela */
+    }
+    div#absolute{
+       background-color: aqua; 
+       padding: 2rem;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 20rem;
+       height: 40rem;
+    }
+    </style>
 </head>
 <body>
-    <div id="esmaecer">
-        <div id="banner">
+    <div id="relative">
+        <div id="absolute">
             <h2>IFRN</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste neque a odit, repellendus doloribus provident deserunt autem veniam iusto nam libero dolorum quae vero? Nam accusantium quos nihil qui sint?</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste neque a odit, repellendus doloribus provident deserunt autem veniam iusto nam libero dolorum quae vero? Nam accusantium quos nihil qui sint?</p>

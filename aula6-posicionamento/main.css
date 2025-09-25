@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: fixed; 
+    z-index: 1;
+    /* o position fixed deixa a marcação fixa na sua posição . a marcação "perde" a largura
+    muda o comportamento para display: inline-block */
+    margin-top: 0;
+    width: 100vw;
+    top: 0; /* deixa fixado no início da página */
+}
+header, footer, section{
+    padding: 2rem;
+    margin: 0 0 2rem 0;
+    background-color: lightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+}
+main{
+    margin-top: 5.7rem; /*pelo header ter ficado sobreposto, o main precisa ter um espaçamento em cima */
+}
+header, footer{
+    background-color: rgb(109, 189, 218);
+    text-align: center;
+}
+div#banner{
+    background-color: rgb(32, 163, 211);
+    padding: 2rem;
+    width: 20rem;
+    height: 20rem;
+    position: absolute; /* o position absolute permite que o elemento fique sobreposto difentemenete do fixed, que segue a rolagem do scroll */
+    /*top: ;
+    left: ;
+    right: ;
+    bottom: ; as coordenadas irão posicionar o elemento. escolher apenas dois: eixo x e y
+    ao trabalhar com posicionamento, não se trabalha com margin */
+    z-index: 3; /* equivale ao eixo z. recebe um valor inteiro que representa sua ordem de camadas/sequencia */
+}
+div#esmaecer{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2; /* para ficar na frente do header e atrás do banner */
+    justify-content: center; /* ALINHAMENTO VERTICAL */
+    display: flex;
+    align-items: center; /* ALINHAMENTO HORIZONTAL */
+}
+h2{
+    position: relative; /* ele não perde espaço na página HTML */
+    top: 5px;
+    font-size: 5rem;
+}
