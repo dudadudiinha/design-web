@@ -1,0 +1,8 @@
+body{
+    background-color: rgba(250, 235, 215, 0.247);
+}
+label[for]{ /* seleciona as marcações de label com o atributo de for definido */
+    display: inline-block; /* permite largura */
+    width: 12rem;  /* por padrão, ele é in-line. pra definir a largura, precisa do inline-block */
+    vertical-align: top;
+}

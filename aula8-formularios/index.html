@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Campo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+    <body>
+        <h1>Inscrição para viagem de campo</h1>
+        <form action="dadosenviados.html"> <!-- tag de formulário -->
+            <label for="nome">*Nome:</label>
+            <input type="text" placeholder="Nome" required id="nome">
+            <br>
+            <label for="email">*E-mail:</label>
+            <input type="email" placeholder="E-mail" required id="email"> 
+            <!-- o valor que está no for precisa ser igual ao id do seu respecitivo input (for=de. tipo "de label para id do input")-->
+            <br>
+            <label for="curso">Curso:</label> 
+            <select name="curso" id="curso"> <!-- a opção de multiple cria uma lista
+            combobox, mais de uma opção -->
+                <option value="info" selected>INFOWEB</option> <!-- deixa a opção selecionada. mais prático -->
+                <option value="msi">Manutenção e Suporte em Informática</option>
+                <option value="adm">Administração</option>
+            </select>
+            <br>
+            <label for="nee">Necessidades específicas:</label>
+            <input type="text" list="list-nee" id="nee"> 
+            <datalist id="list-nee"> <!--  -->
+                <option value="Autismo"></option>
+                <option value="TDAH"></option>
+                <option value="Restrição alimentar"></option>
+            </datalist>
+            <br>
+            <div class="periodo">
+                <label><input type="radio" name="periodo" value="ano1">1° ano</label> 
+                <label><input type="radio" name="periodo" value="ano2">2° ano</label> 
+                <label><input type="radio" name="periodo" value="ano3">3° ano</label>
+                <label><input type="radio" name="periodo" value="ano4">4° ano</label>
+                <!-- o "radio" só permite selecionar 1, o "name" cria o grupo e o "value" é o valor que vai pra programação
+                atributo "name" igual para todos para só poder selecionar um entre os elementos -->
+            </div>
+            <label for="obs">Observações:</label>
+            <textarea name="observacoes" maxlength="300" id="obs" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique a non quis repellendus sit rem magnam ipsum quia ut hic, fugit quidem tempora ratione consectetur odit unde blanditiis explicabo saepe.</textarea>
+            <br>
+            <input type="submit" value="ENVIAR">
+            <!--<button type="submit">ENVIAR</button> 
+            o input subit (dentro de uma tag de form sempre) é igual ao button, 
+            porem a marcação do button pode ser usada fora da tag de formulário e é mais usada no javascript -->
+        </form>
+    </body>
+</html>
