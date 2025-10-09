@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- essa marcação transforma a largura da página na largura do dispositivo. é essencial para a responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halloween</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Halloween CNAT 2025</h1>
+    </header>
+    <div id="destaque">
+        <!-- 
+            1- a tag de picture é específica para responsividade com imagens, diferente de figure, que serve como um container paras as imagens
+            2 - marcação de source maiores em cima
+            3 - pode ser colocada em h1, lista...
+            4 - a largura precisa estar relacionada com a larguta da imagem
+        -->
+        <picture>
+            <source srcset="Rectangle1.jpg" media="(min-width:1440px)"> <!-- source é especifica para a tag de picture -->
+                <source srcset="Rectangle3.jpg" media="(min-width: 744px)">
+                    <img src="Rectangle2.jpg" alt="Imagem de destaque são abóboras">
+                </picture>
+            </div>
+    <main>
+        <section>
+            <h2>Organizadores</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, voluptate quo adipisci tempore doloremque vitae laudantium iusto enim obcaecati nam? Asperiores dolorum error eveniet minus! Delectus nobis quo vel hic.</p>
+        </section>
+        <section>
+            <h2>Organizadores</h2>
+            <p>Dolor voluptatem nemo, culpa quidem repellendus nam dolore aliquid itaque mollitia quia laudantium optio vitae vero similique facilis eum, eos ipsam alias magnam consequuntur quaerat. Iste quas minima rem asperiores.</p>
+        </section>
+        <section>
+            <h2>Organizadores</h2>
+            <p>Distinctio quo, eligendi at molestiae molestias possimus itaque quaerat consequatur quos nam, consequuntur asperiores! Nemo excepturi maiores sint a hic minus ab quos ut, iusto, atque ipsam dolorem, dignissimos voluptas.</p>
+        </section>
+        <section>
+            <h2>Organizadores</h2>
+            <p>Suscipit vel, ducimus expedita alias incidunt non consequuntur hic corrupti. Culpa laborum beatae labore ipsum quisquam suscipit neque doloremque! Harum modi, eligendi alias ducimus fuga nam. Suscipit reprehenderit amet est!</p>
+        </section>
+    </main>
+    <footer>
+        <p>DESENVOLVIDO IFRN/CNAT/DIATINF/INFOWEB</p>
+    </footer>
+
+</body>
+</html>
