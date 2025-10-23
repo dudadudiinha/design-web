@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* isso remove todos os espaçamentos de uma vez, ficando mais fácil de ajeitar depois */
+        }
+        :root{
+            /* cria uma variável pra essa cor específica. caso eu queira mudar a cor, ela já é mudada automaticamnete em todo o código */
+            --coprinc: #08254F;
+            --corsec: #335e9e;
+        }
+        body{
+            background-color: var(--coprinc);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        section{
+            /* o margin 0 auto só funciona em tags que tenham largura definida, por isso não deve colocá-la no main */
+            max-width: 70rem; /* largura máxima é mais responsiva que largura normal */
+            margin: 0 auto; /* coloca o bloco no centro */
+            gap: 2rem;
+            /* flex-basis: 70rem; */
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: column; serve pra elas ficarem uma embiaxo d aoutra no mobile (geralmente não é usada) */
+        }
+        section > div{
+            border: 1px solid var(--corsec);
+            padding: 2rem;
+            box-sizing: border-box; /* esse atributo não altera a largura do bloco ao definir o padding */
+            flex-basis: 34rem; /* em vez de largura, usar flex-basis pra fica mais profissional */
+        }
+        section>h2{
+            /* width: 100%; */
+            flex-basis: 100%;
+            padding-top: 2rem; 
+        }
+
+    </style>
+</head>
+<body>
+    <!--TODA PÁGINA DEVE TER H1
+    para este exemplo, que é apenas um layout, ocultaeremos o h1 -->
+    <main>
+        <section>
+            <h2>Serviços</h2>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam corrupti eum, possimus ipsum quam at? Nobis eos dolores, sit autem libero deserunt officia necessitatibus nulla. Voluptatibus odio perspiciatis animi.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
