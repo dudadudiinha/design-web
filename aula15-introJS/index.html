@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIP - Introdução</title>
+</head>
+<body>
+    <p id="mensagem"></p>
+    <script>
+        document.getElementById("mensagem").innerHTML = "Texto com getElementById" //o innerHTML vai incluir esse texto dentro do HTML mo elemnto com mesmo id
+    // DOM - modelo de documento do objeto
+    </script>
+    <script>
+        /* 
+        - javascript não é java (linguagem de programação lado servidor)
+        - javascript é linguagem de propagação geralmente lado cliente (o que vai rodar no navegador)
+        - ela é interpretada (diferente de executada). podem ter diferentes interpretações
+        - é sensível à capitulação, letras maisucuslas
+        - o desenvolvimento web é um tripé:
+            -html é a estrutura, conteúdo
+            - JS é a interatividade, comportamento...
+        - pode ser: lado cliente, servidor, mobile e desktop
+        */
+    window.alert("Seja bem-vindo");
+    document.write("<p>Texto com documento.write</p>"); //o ideal é colocar a tag de <p> pra fazer sentido dentro do body
+    console.log("oiii")
+    /* variáveis - NÃO são "fortemente tipadas" (definir a variável logo quando ela for receber o valor). pode usar var, let ou const
+    var - declaração global
+    let - declaração local e mais ágil para o sistema 
+    const - tem um valor específico que não pode ser mudado */
+    let numint = 3; // ou só numint = 3; 
+    let text = "INFOWEB";
+    let numfloat = 5.8;
+    let booleano = true;
+    // o mais concatena, deixa um str grudado de um num, por ex
+    console.log(numint+numfloat+text);
+    console.log(54-98);
+    console.log(54*98);
+    console.log(54/98);
+    console.log("Valor de numint:");
+    console.log(numint);
+    console.log(numint++); // ++ = incremento. valor da variável + 1
+    console.log(numint);
+    // operadores relacionais
+    console.log(4==7);
+    console.log(4!=7);
+    console.log(4<=7);
+    console.log(4>=7);
+    console.log(4==4 && 5<=2); // se ambos forem True (and)
+    console.log(4==5 || 10>5); // se um for True (or)
+    console.log("COMO FUNCIONA ===");
+    console.log("3" === 3); // O operador === analisa se os tipos são iguais (str, int)
+    console.log("COMO FUNCIONA ==");
+    console.log("3" == 3);
+
+    let nome = window.prompt("Qual seu nome?")
+    document.write(nome)
+    if(nome=="Dani"){
+        alert("Oi Dani");
+    }else{
+        alert("Você não é Dani!");
+    }
+    </script>
+</body>
+</html>
