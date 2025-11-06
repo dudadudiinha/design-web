@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <style>
+        p{
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de soma</h2>
+        <label for="n1">N1:</label>
+        <input type="text" id="n1">
+        <label for="n2">N2:</label>
+        <input type="text" id="n2">
+        <button id="somar">SOMAR</button>
+        <p id="resultado"></p>
+
+    <script>
+        //const é uma variável que o valor não vai mudar
+        const somar = document.querySelector("#somar");
+        // seleciona a marcação com id somar
+        somar.addEventListener("click", function(e){
+            console.log("addEventListener");
+            n1 = parseInt(document.getElementById("n1").value);
+            // pegar valor do input com id n1
+            n2 = parseInt(document.getElementById("n2").value);
+            document.getElementById("resultado").innerHTML = n1+n2;
+            console.log(n1+n2);
+        })
+
+        let alunos = [7, 8, 6, 5, 4, 12];
+        console.log(alunos[2]);
+        // irá exibir o número 6, pois o array começa com indíce 0
+        alunos.push(5) // 
+        alunos[3] = 0;
+        delete alunos[0];
+        console.log(alunos[0]);
+        console.log(alunos.length)
+
+        let items = ["Luis", "Maria", "Felipe", "Vinicius", "Thiago"];
+        console.log(items[1]);
+
+        let emocoes = ["😊", "😍", "🥰", "😝", "🙄"];
+        console.log(Math.random());
+        // Math.random() retorna um número aleatátorio entre 0 e 1
+        console.log(Math.floor(Math.random()));
+        // Math.floor() - arredonda
+        console.log(Math.floor(Math.random()*10));
+        //  quando multiplicar por 10, é exibido um número randômico entre 0 e 9
+        let x = Math.floor(Math.random()*5);
+        document.write(`<p> ${emocoes[x]}</p>`); // mais profissional, elegante
+        document.write('<p>'+emocoes[x]+'</p>');
+
+        // estrutura d repetição
+        //  o for é a sintaxe pra percorrer a array
+        for(item in emocoes){
+            document.write(`<p> ${emocoes[item]} </p>`)
+        }
+        for(let nfor=0; nfor<=5 ; nfor++){ //for nfor in range(0, 5+1)
+            console.log(nfor);
+        }
+
+        let opcao = 2;
+        // let opcao = parseInt(window.prompt("Digite um número de 0 a 2")); 
+        //parseInt converte pra inteiro. let -> L de Local
+        switch(opcao){ // ESTRUTURA CONDICIONAL 
+            case 0: console.log("teste 0"); break; // o break serve pro sistema sair logo do switch assim que um caso é verdadeiro, não analisando os outros casos
+            case 1: console.log("teste 1"); break;
+            case 2: console.log("teste 2"); break;
+            default: // é como se fosse um else
+                console.log("teste default"); break;
+        }
+    </script>
+</body>
+</html>
