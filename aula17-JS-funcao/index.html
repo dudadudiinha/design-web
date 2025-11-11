@@ -6,7 +6,29 @@
     <title>JAVASCRIPT</title>
 </head>
 <body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem provident earum dicta culpa, quod possimus saepe ducimus praesentium aliquid. Quis eius adipisci aliquam perferendis sit! Molestias velit cumque exercitationem fugit.</p>
+    <input type="color" id="cor">
+    <button onclick="mudarcor()">Button atribuido onclick</button>
+    <!-- evento dentro da tag não é indicado, pq mistura JS com HTML -->
+    <button id="bt2">Button com eventListener</button>
+    
     <script>
+        let produtos = ["lapis", "tesoura", "borracha"];
+        produtos.forEach(function(item,i,lista){
+            console.log(`Array com forEach: ${item}, ${i}, ${lista}`)
+        })
+
+        function mudarcor(){
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        }
+        bt2 = document.getElementById("bt2");
+        bt2.addEventListener("click", function(){ // criou a funçaõ dentro do evento
+            console.log("sss")
+            let cor =  document.getElementById("cor").value; // vai pegar o valor selecionado no input do tipo color
+            document.getElementById("texto").style.color = cor; // aqui o estilo é atribuido
+        })
+
         function somar4(num1=0,num2=0){
             return num1+num2
         }

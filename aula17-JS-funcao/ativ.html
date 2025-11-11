@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem provident earum dicta culpa, quod possimus saepe ducimus praesentium aliquid. Quis eius adipisci aliquam perferendis sit! Molestias velit cumque exercitationem fugit.</p>
+    <button id="btd">Diminuir</button>
+    <button id="bta">Aumentar</button>
+    
+    <script>
+        bta = document.getElementById("bta");
+        bta.addEventListener("click", function(){
+            document.getElementById("texto").style.fontSize = "20px";
+        })
+        btd = document.getElementById("btd");
+        btd.addEventListener("click", function(){
+            document.getElementById("texto").style.fontSize = "10px";
+        })
+    </script>
+</body>
+</html>
