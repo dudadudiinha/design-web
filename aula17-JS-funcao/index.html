@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script>
+        function somar4(num1=0,num2=0){
+            return num1+num2
+        }
+        console.log(somar4(7)) //o sete, nesse caso, serve pro primeiro parametro
+        function somar5(num1, num2){
+            if(!isNaN(num1) && !isNaN(num2)){ 
+                // isNaN = se não é número. se não for um número = True. por causa da exclamação, vai ser False
+                // ! = diferente
+                return num1+num2;
+            }else
+                return "Passar um número";
+        }
+        console.log(somar5(5,"aaa"));
+        console.log(somar5(5,7));
+        function borda(cor, espessura){
+            document.body.style.borderColor = cor;
+            document.body.style.borderWidth = espessura+'rem';
+            document.body.style.borderStyle = "solid";
+        }
+        borda('blue', 3);
+    </script>
+</body>
+</html>
