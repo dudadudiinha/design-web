@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button id="bt12">Enviar</button>
+    <br>
+    <p id="resultado">Resultado</p>
+    <script>
+        bt12 = document.getElementById("bt12")
+        bt12.addEventListener("click", function(){
+            let resultado = ""; 
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            for (let i = num1; i <= num2; i++){
+                resultado += i+"\n";
+            }
+        document.getElementById("resultado").innerText = resultado
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste officia veritatis quasi, aliquam minus! Qui aut exercitationem ab, esse error quas dolore labore possimus ea! Eum recusandae et ab?</p>
+    <button id="btclaro">Claro</button>
+    <button id="bte">Escuro</button>
+    <script>
+        btclaro = document.getElementById("btclaro");
+        btclaro.addEventListener("click", function(){
+            console.log("Claro");
+            document.getElementById("texto").style.color = "white";
+            document.body.style.backgroundColor = "black";
+        })
+        bte = document.getElementById("bte");
+        bte.addEventListener("click", function(){
+            document.getElementById("texto").style.color = "black";
+            document.body.style.backgroundColor = "white"
+        })
+    </script>
+</body>
+</html>

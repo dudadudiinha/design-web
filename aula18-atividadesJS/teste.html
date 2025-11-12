@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorum. Soluta itaque consequuntur eum pariatur quae quasi impedit ipsam veritatis dolorem tenetur delectus nisi non, animi voluptate voluptatem excepturi consectetur.</p>
+    <input type="color" id="color">
+    <button id="bt">Mudar texto</button>
+    <button id="bf">Mudar fundo</button>
+    <script>
+        bt = document.getElementById("bt");
+        bt.addEventListener("click", function(){
+            let color = document.getElementById("color").value;
+            document.getElementById("texto").style.color = color;
+        });
+        bt = document.getElementById("bf");
+        bf.addEventListener("click", function(){
+            let color = document.getElementById("color").value;
+            document.body.style.backgroundColor = color;
+        })
+    </script>
+</body>
+</html>
