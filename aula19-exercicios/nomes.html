@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista nomes</title>
+</head>
+<body>
+    <h2>Lista de Nomes</h2>
+    <label>Digite um nome:</label>
+    <input type="text" id="nome">
+    <button id="bt">Adicionar</button>
+    <p id="lista"></p>
+
+    <script>
+        let nomes = ["Duda", "Carol", "Maria"];
+        function ver_lista() {
+            document.getElementById("lista").innerHTML = nomes.join("<br>"); // join = coloca algum separador entre os elementos da lista
+        }
+        ver_lista();
+        let botao = document.getElementById("bt");
+        botao.addEventListener("click", function() {
+            let nomenovo = document.getElementById("nome").value;
+            nomes.push(nomenovo); // push = coloca um item no final da lista
+            ver_lista();
+        });
+    </script>
+
+</body>
+</html>

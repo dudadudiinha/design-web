@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões coloridos</title>
+    <style>
+        button{
+            width: 10rem;
+            height: 10rem;
+            border: 1px solid white;
+            border-radius: 100%;
+            margin: 5px;   
+            cursor: pointer;        
+        }
+    </style>
+<body>
+    <section id="area"></section>
+    <script>
+        function mudarFundo(r, g, b) {
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+        let area = document.getElementById("area");
+        for (let i = 0; i < 100; i++) {
+            let r = Math.floor(Math.random()*256);
+            let g = Math.floor(Math.random()*256);
+            let b = Math.floor(Math.random()*256);
+        
+        area.innerHTML += 
+            `<button onclick="mudarFundo(${r}, ${g}, ${b})"
+                style="background-color: rgb(${r},${g},${b});">
+            </button>`;       
+        }
+    </script>
+</body>
+</html>
