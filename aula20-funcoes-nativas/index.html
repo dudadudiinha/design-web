@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcoes</title>
+</head>
+<body>
+    <p id="diahora"></p>
+    <script>
+        let nome = "infoweb";
+        console.log("Comprimento de string: "+nome.length);
+        console.log("Posição do caracter da string: " + nome.charAt(0)); // imprime a letra que está no indice 0. nesse caso, é I
+        console.log("Substitui strings: "+ nome.replace("info", "informatica para internet")); // substitui a primeira string digitada pela segunda
+        console.log("Divide a string: "+ nome.split("O")[0]); // 
+        console.log("Maiúsculas: " +nome.toUpperCase()); // deixa maisuculo. deixar mnisculo (toLowerCase())
+        nome = "    INFOWEB     "
+        console.log(nome);
+        console.log("Concatena strings: " + nome.trim());        
+        console.log("Concatena strings: "+ nome.concat(" IFRN"));  
+        console.log("Concatena strings: "+ nome.trim().concat(" IFRN"));  
+
+        // funcoes nativas para números
+        console.log("Valor de PI: "+ Math.PI);
+        let num = 54.3
+        console.log("Arredeonda SEMPRE pra cima: "+ Math.ceil(num));
+        console.log("Arredeonda SEMPRE pra baixo: "+ Math.floor(num));
+        console.log("Arredeondamento padrão: "+ Math.round(num));
+        console.log("Número randômico: "+ Math.random(num));
+        console.log("Número randômico: "+ Math.random(num)*100);
+        // menos usados
+        console.log("Potencia: "+ Math.pow(2, 4)); // 2 elevado a 4
+        console.log("Raiz quadrada: "+ Math.sqrt(9));
+
+        // funcoes nativas para datas
+        const data = new Date();
+        console.log("Dia de hoje: "+ data.getDate()); // número do dia
+        console.log("Dia da semana: "+ data.getDay()); // dia da semana - retorna número. ex: 1 - segunda, 2 - terça
+        console.log("Mês: "+ data.getMonth()); // começa por 0, ou seja, vai até mês 11
+        console.log("Ano: "+ data.getFullYear());
+        console.log("Hora: "+ data.getHours());
+        console.log("Minutos: "+ data.getMinutes());
+        function hora(){
+            let d = new Date()
+            // document.getElementById("diahora").innerHTML = d.getSeconds();
+        }
+        setInterval(hora, 1000) // quando chamar uma função, não pode colcar os paranteses após o nome dela
+        // mudar background, texto, tamanho a cada segundo
+
+        // atividade
+        let meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro","novembro"];
+        let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+        let dias = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+        console.log(data.getDate()+"/"+nums[data.getMonth()]+"/"+data.getFullYear())
+        console.log(dias[data.getDay()]+", "+data.getDate()+"/"+nums[data.getMonth()]+"/"+data.getFullYear())
+        console.log(dias[data.getDay()]+", "+data.getDate()+" de "+meses[data.getMonth()]+ " de "+data.getFullYear()+" - "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds())
+        document.getElementById("diahora").innerHTML = dias[data.getDay()]+", "+data.getDate()+" de "+meses[data.getMonth()]+ " de "+data.getFullYear()+" - "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds();
+    </script>
+</body>
+</html> 
