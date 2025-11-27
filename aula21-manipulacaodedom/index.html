@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destaque {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+
+    <span>SPAN 1</span>
+
+    <p class="texto">
+        DOM - Modelo de Objeto do Documento 
+        <span>TEXTO NO SPAN 2</span>
+    </p>
+
+    <p id="paragrafocomid"></p>
+
+    <figure>
+        <img src="https://wallpapers.com/images/featured/imagens-de-paisagens-a3hr6gk3xfx36dyg.jpg" alt="paisagem">
+    </figure>
+
+    <button class="trocarimagem">Trocar</button>
+
+    <script>
+        const pcomid = document.getElementById("paragrafocomid");
+        const pcomclass = document.querySelector(".texto span");
+
+        pcomclass.innerHTML = "<b>TEXTO</b> 2 para o SPAN!";
+        pcomclass.style.backgroundColor = "blue";
+
+        document.querySelector(".texto").classList.add("destaque");
+
+        document.getElementsByTagName("li")[0].style.color = "blue";
+        console.log("Total de li's: " +document.getElementsByTagName("li").length);
+
+        const imagem = document.querySelector("img");
+        console.log(imagem.getAttribute("src"));
+
+        const trocarimagem = document.querySelector(".trocarimagem");
+
+        function trocar() {
+            //setInterval(trocar, 1000)
+            document.querySelector("img").src = "https://static.vecteezy.com/ti/vetor-gratis/p1/9169455-ceu-dourado-por-do-sol-na-costa-natureza-paisagem-vetor.jpg";
+        }
+
+        trocarimagem.addEventListener("click", trocar);
+    </script>
+</body>
+</html>
