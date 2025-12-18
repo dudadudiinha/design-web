@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .favorito{
+            color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1> {{ titulo }} </h1> 
+        <!-- {{ }}: dinamica do bigode -->
+        <table>
+            <tr v-for="contato in contatos"
+                :class="{'favorito': contato.favorito}">
+                <!-- diretivas -->
+                <td><img width="50 ":src="contato.foto" alt="pessoa"/></td>
+                <!-- é necessário colocar os dois pontos para chamar a variavel -->
+                <td> {{ contato.nome }} </td>
+                <td> {{ contato.cel }} </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="agenda.js"></script>
+</body>
+</html>
